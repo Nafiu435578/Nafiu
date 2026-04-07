@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafiu Ebrahim | Tech & Trading Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #ededed; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: #171717; border: 1px solid #262626; transition: 0.3s; }
+        .card:hover { border-color: #60a5fa; transform: translateY(-5px); }
+        .nav-blur { backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.8); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 nav-blur border-b border-gray-900">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold gradient-text">NE.</span>
+            <div class="space-x-6 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#work" class="hover:text-white transition">Expertise</a>
+                <a href="mailto:your-email@example.com" class="text-white border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-800 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter">NAFIU <span class="gradient-text">EBRAHIM</span></h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
+            Tech Enthusiast • Web Developer • Trader • Global Traveler
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#work" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold transition shadow-lg shadow-blue-900/20">Explore My World</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold mb-8">The Mission</h2>
+        <p class="text-xl text-gray-400 leading-relaxed italic">
+            "I spend my time at the intersection of code, AI, and trading. For me, it’s all about staying ahead of the curve—whether that’s mastering a new framework or exploring a new country."
+        </p>
+    </section>
+
+    <section id="work" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-10 rounded-3xl">
+                <div class="text-blue-500 mb-4 text-3xl">💻</div>
+                <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+                <p class="text-gray-400 leading-relaxed">Building clean, high-performance websites and exploring AI-integrated workflows for the modern web.</p>
+            </div>
+            <div class="card p-10 rounded-3xl">
+                <div class="text-purple-500 mb-4 text-3xl">📉</div>
+                <h3 class="text-2xl font-bold mb-3">Global Trading</h3>
+                <p class="text-gray-400 leading-relaxed">Analyzing market trends and financial technology with a focus on high-growth technical analysis.</p>
+            </div>
+            <div class="card p-10 rounded-3xl">
+                <div class="text-green-500 mb-4 text-3xl">🤖</div>
+                <h3 class="text-2xl font-bold mb-3">AI & Future Tech</h3>
+                <p class="text-gray-400 leading-relaxed">Early adopter of AI tools for content creation, automated systems, and solving complex digital problems.</p>
+            </div>
+            <div class="card p-10 rounded-3xl">
+                <div class="text-red-500 mb-4 text-3xl">✈️</div>
+                <h3 class="text-2xl font-bold mb-3">Tech Travel</h3>
+                <p class="text-gray-400 leading-relaxed">Combining work with exploration, documenting high-end tech trends across international borders.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-gray-900 mt-20">
+        <p class="text-gray-600 uppercase tracking-widest text-xs">© 2026 Nafiu Ebrahim — Built with AI</p>
+    </footer>
+
+</body>
+</html>
