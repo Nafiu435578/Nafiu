@@ -3,135 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nafiu Ebrahim | Portfolio</title>
+    <title>Nafiu Ebrahim | Entrepreneur & Visionary</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;800&family=Outfit:wght@100;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
-        body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.1); border-radius: 1.5rem; backdrop-filter: blur(10px); }
-        .hero-glow { background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
-        .text-gradient { background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .skill-badge { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(59, 130, 246, 0.1); transition: 0.3s; }
-        .skill-badge:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.3); }
-        .nav-blur { background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        body { background-color: #010409; color: #f0f6fc; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .outfit { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(13, 17, 23, 0.7); border: 1px solid rgba(48, 54, 61, 0.5); border-radius: 2rem; backdrop-filter: blur(12px); }
+        .hero-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .skill-badge { background: #0d1117; border: 1px solid #30363d; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .skill-badge:hover { border-color: #58a6ff; transform: scale(1.05); box-shadow: 0 0 20px rgba(88, 166, 255, 0.1); }
+        .giant-text { font-size: clamp(3rem, 15vw, 12rem); line-height: 0.85; letter-spacing: -0.05em; }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
 
     <div class="hero-glow fixed inset-0 -z-10"></div>
 
-    <nav class="fixed top-0 w-full z-50 p-4 md:p-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-6 py-4">
-            <div class="text-xl font-black tracking-tighter">NAFIU</div>
-            <div class="flex gap-6 md:gap-10 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="mailto:ayonk5578@gmail.com" class="hover:text-blue-400 transition">Contact</a>
+    <nav class="fixed top-0 w-full z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-8 py-5">
+            <div class="text-2xl font-black tracking-tighter outfit">N<span class="text-blue-500">.</span>E</div>
+            <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
+                <a href="#about" class="hover:text-white transition">The Narrative</a>
+                <a href="#skills" class="hover:text-white transition">Expertise</a>
+                <a href="mailto:ayonk5578@gmail.com" class="text-white">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="max-w-6xl mx-auto px-6 pt-48 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1 text-center lg:text-left">
-            <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">
-                Entrepreneur & Visionary
+    <section class="min-h-screen flex flex-col justify-center px-6 pt-32">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="inline-block px-5 py-2 rounded-full glass-card border-blue-500/30 text-blue-400 text-[10px] font-bold uppercase tracking-[0.4em] mb-12">
+                Entrepreneurial Portfolio 2026
             </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-tight">
-                Nafiu <br> <span class="text-gradient">Ebrahim.</span>
+            <h1 class="giant-text font-black outfit mb-12">
+                NAFIU <br> <span class="text-gradient">EBRAHIM.</span>
             </h1>
-            <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0">
-                Specializing in Web Development, AI Automation, and Market Trading. Exploring the world through the lens of technology and travel.
-            </p>
-            
-            <div class="flex justify-center lg:justify-start gap-4">
-                <a href="https://www.facebook.com/NafiuEbrahim2" target="_blank" class="glass-card w-14 h-14 flex items-center justify-center text-xl hover:text-blue-500 hover:border-blue-500/50 transition">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/nafiu_fmp/" target="_blank" class="glass-card w-14 h-14 flex items-center justify-center text-xl hover:text-pink-500 hover:border-pink-500/50 transition">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="mailto:ayonk5578@gmail.com" class="glass-card w-14 h-14 flex items-center justify-center text-xl hover:text-yellow-500 hover:border-yellow-500/50 transition">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
+            <div class="grid lg:grid-cols-2 gap-12 items-end">
+                <p class="text-xl md:text-3xl font-light text-gray-400 leading-tight max-w-xl">
+                    A digital architect specializing in <span class="text-white font-medium">Web Systems</span>, 
+                    <span class="text-white font-medium">AI Intelligence</span>, and the fast-paced world of 
+                    <span class="text-white font-medium">Market Trading</span>.
+                </p>
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/nafiu_fmp/" target="_blank" class="glass-card p-6 text-2xl hover:text-blue-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/NafiuEbrahim2" target="_blank" class="glass-card p-6 text-2xl hover:text-blue-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-40">
+        <div class="grid lg:grid-cols-12 gap-16 items-start">
+            <div class="lg:col-span-5">
+                <div class="glass-card p-3 aspect-[4/5] overflow-hidden rotate-[-2deg] hover:rotate-0 transition duration-500">
+                    <img src="me.jpg" alt="Nafiu" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition duration-1000">
+                </div>
+            </div>
+            <div class="lg:col-span-7 pt-12">
+                <h2 class="text-xs font-bold text-blue-500 uppercase tracking-[0.5em] mb-10">The Narrative</h2>
+                <h3 class="text-4xl md:text-6xl font-bold outfit mb-10 leading-tight">
+                    Beyond the Code. <br> Inside the <span class="italic text-gray-500 font-light">Market.</span>
+                </h3>
+                <div class="space-y-8 text-xl text-gray-400 font-light leading-relaxed">
+                    <p>
+                        I don't just build websites; I engineer digital ecosystems. My journey is defined by a relentless curiosity for how the world moves—whether that's through the logic of a <span class="text-white font-bold">Full-Stack Application</span> or the volatility of <span class="text-white font-bold">Global Trading Markets</span>.
+                    </p>
+                    <p>
+                        Currently, I am deep-diving into <span class="text-white font-bold">AI Automation</span>, finding ways to make machines work harder so humans can think bigger. As an entrepreneur, my goal is simple: solve complex problems with elegant, high-impact solutions.
+                    </p>
+                    <p class="text-white italic serif">
+                        "The world is a marketplace. I'm just here to optimize it."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-40">
+        <div class="mb-20">
+            <h2 class="text-5xl md:text-8xl font-black outfit tracking-tighter mb-4">EXPERTISE.</h2>
+            <p class="text-gray-500 tracking-widest uppercase text-xs">The Toolkit of a Modern Entrepreneur</p>
         </div>
         
-        <div class="order-1 lg:order-2">
-            <div class="glass-card p-3 aspect-square max-w-[450px] mx-auto overflow-hidden">
-                <img src="me.jpg" alt="Nafiu Ebrahim" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition duration-1000">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="skill-badge p-12 rounded-[2.5rem]">
+                <i class="fa-solid fa-code text-4xl text-blue-500 mb-8"></i>
+                <h4 class="text-2xl font-bold mb-4">Web Systems</h4>
+                <p class="text-gray-500 text-sm">Building scalable, high-performance web experiences with clean, modern architecture.</p>
+            </div>
+            <div class="skill-badge p-12 rounded-[2.5rem]">
+                <i class="fa-solid fa-robot text-4xl text-purple-500 mb-8"></i>
+                <h4 class="text-2xl font-bold mb-4">AI Intelligence</h4>
+                <p class="text-gray-500 text-sm">Automating the mundane. Integrating LLMs and custom workflows to drive efficiency.</p>
+            </div>
+            <div class="skill-badge p-12 rounded-[2.5rem]">
+                <i class="fa-solid fa-chart-line text-4xl text-emerald-500 mb-8"></i>
+                <h4 class="text-2xl font-bold mb-4">Trading</h4>
+                <p class="text-gray-500 text-sm">Analyzing market psychology and statistical data to navigate global financial markets.</p>
+            </div>
+            <div class="skill-badge p-12 rounded-[2.5rem]">
+                <i class="fa-solid fa-earth-americas text-4xl text-orange-500 mb-8"></i>
+                <h4 class="text-2xl font-bold mb-4">Travel</h4>
+                <p class="text-gray-500 text-sm">Exploring global perspectives. From Riyadh to New York, the world is my office.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
-        <div class="glass-card p-8 md:p-16 border-blue-500/20">
-            <h2 class="text-xs font-bold text-blue-500 uppercase tracking-[0.3em] mb-8">The Journey</h2>
-            <p class="text-2xl md:text-5xl font-light leading-tight text-white mb-10">
-                I am a <span class="italic font-bold">multi-disciplinary</span> creator focusing on the intersection of automation and web experiences.
-            </p>
-            <div class="h-px bg-slate-800 w-full mb-10"></div>
-            <p class="text-slate-400 leading-relaxed max-w-3xl text-lg md:text-xl">
-                My work bridges the gap between complex AI logic and intuitive user interfaces. When I'm not developing or analyzing market trends, you'll find me traveling and seeking out new global perspectives.
-            </p>
-        </div>
-    </section>
-
-    <section id="skills" class="max-w-6xl mx-auto px-6 py-24">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-            <div>
-                <h2 class="text-4xl font-bold mb-2">Expertise & Tools</h2>
-                <p class="text-slate-500">The core technologies behind my projects</p>
+    <footer class="max-w-7xl mx-auto px-6 py-40 text-center border-t border-gray-900">
+        <h2 class="text-4xl md:text-8xl font-black outfit mb-12">LET'S CONNECT.</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+            <a href="mailto:ayonk5578@gmail.com" class="bg-white text-black px-12 py-6 rounded-full font-black text-xs tracking-[0.4em] uppercase hover:bg-blue-600 hover:text-white transition">
+                Send an Email
+            </a>
+            <div class="flex gap-8 text-2xl text-gray-500">
+                <a href="https://www.facebook.com/NafiuEbrahim2" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nafiu_fmp/" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="skill-badge p-6 rounded-2xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                    <i class="fa-solid fa-code text-xl"></i>
-                </div>
-                <span class="font-bold tracking-tight">Web Development</span>
-            </div>
-            <div class="skill-badge p-6 rounded-2xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
-                    <i class="fa-solid fa-robot text-xl"></i>
-                </div>
-                <span class="font-bold tracking-tight">AI Automation</span>
-            </div>
-            <div class="skill-badge p-6 rounded-2xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                    <i class="fa-solid fa-chart-line text-xl"></i>
-                </div>
-                <span class="font-bold tracking-tight">Market Trading</span>
-            </div>
-            <div class="skill-badge p-6 rounded-2xl flex items-center gap-5">
-                <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400">
-                    <i class="fa-solid fa-plane-up text-xl"></i>
-                </div>
-                <span class="font-bold tracking-tight">World Travel</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <div class="glass-card p-12 md:p-20 text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-6">Let's build something <br> remarkable.</h2>
-                <a href="mailto:ayonk5578@gmail.com" class="inline-block mt-6 bg-white text-black px-10 py-4 rounded-full font-black text-sm tracking-widest hover:bg-blue-500 hover:text-white transition uppercase">
-                    Get In Touch
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="max-w-6xl mx-auto px-6 py-20 text-center border-t border-slate-900/50">
-        <p class="text-slate-600 text-[10px] uppercase tracking-[0.5em] mb-8">Nafiu Ebrahim © 2026</p>
-        <div class="flex justify-center gap-8 text-slate-400">
-            <a href="https://www.facebook.com/NafiuEbrahim2" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/nafiu_fmp/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:ayonk5578@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+        <p class="mt-32 text-[10px] text-gray-700 tracking-[1em] uppercase">Nafiu Ebrahim © 2026</p>
     </footer>
 
 </body>
