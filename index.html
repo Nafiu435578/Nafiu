@@ -17,16 +17,23 @@
 }
 
 body {
-  background: linear-gradient(135deg, #020617, #0f172a);
+  background: #020617;
   color: white;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* PARTICLES */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* NAV */
 nav {
   position: fixed;
   width: 100%;
-  top: 0;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -35,16 +42,10 @@ nav {
   z-index: 1000;
 }
 
-nav h1 {
-  color: #38bdf8;
-  font-size: 1.2em;
-}
-
 nav a {
   margin-left: 15px;
-  text-decoration: none;
   color: #ccc;
-  font-size: 0.9em;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -55,47 +56,38 @@ nav a:hover {
 .hero {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 120px 20px;
   text-align: center;
-  padding: 120px 20px 60px;
 }
 
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: #1e293b;
-  margin-bottom: 20px;
+  background-image: url('me.jpg');
   background-size: cover;
   background-position: center;
-}
-
-
-.profile-pic {
- background-image: url('me.jpg');
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 40px #38bdf8;
+  margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-size: 2.2em;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  font-size: 2.5em;
+  background: linear-gradient(90deg,#38bdf8,#6366f1,#22c55e);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.hero h3 {
+#typing {
   margin-top: 10px;
   color: #94a3b8;
-  font-weight: 400;
 }
 
-.hero p {
-  margin-top: 15px;
-  color: #aaa;
-  max-width: 500px;
-}
-
+/* BUTTON */
 .btn {
   margin-top: 25px;
   padding: 12px 25px;
@@ -105,28 +97,28 @@ nav a:hover {
   text-decoration: none;
   transition: 0.3s;
 }
-
-.btn:hover {
-  transform: scale(1.1);
-}
+.btn:hover { transform: scale(1.1); }
 
 /* SECTIONS */
 section {
   padding: 80px 20px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-  scroll-margin-top: 80px; /* FIXED NAV SCROLL */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-h3 {
-  margin-bottom: 20px;
-  font-size: 1.8em;
-}
+h3 { margin-bottom: 20px; }
 
-/* GRID */
+/* CARDS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 20px;
 }
 
@@ -134,29 +126,27 @@ h3 {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
+}
+
+.card i {
+  color: #38bdf8;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 /* SOCIAL */
-.socials {
-  margin-top: 20px;
-}
-
 .socials a {
   margin: 0 10px;
+  font-size: 1.5em;
   color: white;
-  font-size: 1.4em;
-  transition: 0.3s;
 }
-
-.socials a:hover {
-  color: #38bdf8;
-}
+.socials a:hover { color: #38bdf8; }
 
 /* FOOTER */
 footer {
@@ -164,29 +154,15 @@ footer {
   padding: 30px;
   color: #777;
 }
-
-/* MOBILE */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav div {
-    margin-top: 10px;
-  }
-
-  .hero h2 {
-    font-size: 1.8em;
-  }
-}
 </style>
 </head>
 
 <body>
 
+<canvas id="bg"></canvas>
+
 <nav>
-  <h1>Nafiu Ebrahim</h1>
+  <div>Nafiu Ebrahim</div>
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -197,16 +173,40 @@ footer {
 
 <section class="hero">
   <div class="profile-pic"></div>
-
   <h2>Nafiu Ebrahim</h2>
-  <h3>Entrepreneur • Web Developer • AI Automation • Trader</h3>
+  <div id="typing"></div>
+  <a href="#projects" class="btn">Explore My Work</a>
+</section>
 
+<section id="about">
+  <h3>🚀 About Me</h3>
   <p>
-    I build digital systems, automate businesses with AI, and explore global markets while traveling the world.
+    I build systems, automate businesses, and move fast. I focus on AI, web, and trading.
+    I travel, learn, and execute. Always building. Always leveling up.
   </p>
+</section>
 
-  <a href="#projects" class="btn">View My Work</a>
+<section id="skills">
+  <h3>⚡ Skills</h3>
+  <div class="grid">
+    <div class="card"><i class="fas fa-code"></i> Web Dev</div>
+    <div class="card"><i class="fas fa-robot"></i> AI Automation</div>
+    <div class="card"><i class="fas fa-chart-line"></i> Trading</div>
+    <div class="card"><i class="fas fa-bolt"></i> Fast Execution</div>
+  </div>
+</section>
 
+<section id="projects">
+  <h3>🔥 Projects</h3>
+  <div class="grid">
+    <div class="card"><i class="fas fa-brain"></i> AI Systems</div>
+    <div class="card"><i class="fas fa-chart-pie"></i> Trading Tools</div>
+    <div class="card"><i class="fas fa-globe"></i> Web Projects</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>📩 Contact</h3>
   <div class="socials">
     <a href="https://www.instagram.com/nafiu_fmp/" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/NafiuEbrahim2" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -214,51 +214,60 @@ footer {
   </div>
 </section>
 
-<section id="about">
-  <h3>About Me</h3>
-  <p>
-    I'm Nafiu Ebrahim, an entrepreneur focused on building impactful digital products.
-    I specialize in web development, AI automation, and trading systems.
-    I enjoy traveling across countries and turning ideas into scalable businesses.
-  </p>
-</section>
+<footer>© 2026 Nafiu Ebrahim</footer>
 
-<section id="skills">
-  <h3>Skills</h3>
-  <div class="grid">
-    <div class="card">Web Development (Modern UI/UX)</div>
-    <div class="card">AI Automation & Bots</div>
-    <div class="card">Trading & Strategy</div>
-    <div class="card">Startup Building</div>
-  </div>
-</section>
+<script>
+/* TYPING EFFECT */
+const text = ["Entrepreneur","AI Automation","Web Developer","Trader"];
+let i=0,j=0,current="",isDeleting=false;
+function type(){
+  current=text[i];
+  document.getElementById("typing").textContent=current.substring(0,j);
+  if(!isDeleting && j<current.length){ j++; }
+  else if(isDeleting && j>0){ j--; }
+  else{
+    isDeleting=!isDeleting;
+    if(!isDeleting) i=(i+1)%text.length;
+  }
+  setTimeout(type,isDeleting?50:100);
+}
+type();
 
-<section id="projects">
-  <h3>Projects</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>AI Automation System</h4>
-      <p>Automating business workflows using AI tools.</p>
-    </div>
-    <div class="card">
-      <h4>Trading Dashboard</h4>
-      <p>Real-time trading analytics and insights.</p>
-    </div>
-    <div class="card">
-      <h4>Business Websites</h4>
-      <p>Clean and modern websites that convert.</p>
-    </div>
-  </div>
-</section>
+/* SCROLL ANIMATION */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){
+      sec.classList.add("show");
+    }
+  });
+});
 
-<section id="contact">
-  <h3>Contact</h3>
-  <p>Email: ayonk5578@gmail.com</p>
-</section>
+/* PARTICLES */
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-<footer>
-  <p>© 2026 Nafiu Ebrahim</p>
-</footer>
+let particles=[];
+for(let i=0;i<80;i++){
+  particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:1,vy:1});
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    p.x+=p.vx;
+    p.y+=p.vy;
+    if(p.x>canvas.width||p.x<0) p.vx*=-1;
+    if(p.y>canvas.height||p.y<0) p.vy*=-1;
+    ctx.fillStyle="#38bdf8";
+    ctx.fillRect(p.x,p.y,2,2);
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 
 </body>
 </html>
