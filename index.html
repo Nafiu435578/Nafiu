@@ -3,74 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nafiu Ebrahim | Tech & Trading Portfolio</title>
+    <title>NAFIU | International Strategy & Tech</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0a0a0a; color: #ededed; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card { background: #171717; border: 1px solid #262626; transition: 0.3s; }
-        .card:hover { border-color: #60a5fa; transform: translateY(-5px); }
-        .nav-blur { backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.8); }
+        :root { --bg: #0a0a0b; --accent: #3b82f6; --glass: rgba(255, 255, 255, 0.03); }
+        body { background-color: var(--bg); color: #e5e7eb; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%); }
+        .glass-card { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; transition: 0.3s; }
+        .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-5px); }
+        .title-font { font-family: 'Space Grotesk', sans-serif; }
     </style>
 </head>
 <body>
+    <div class="hero-gradient fixed inset-0 -z-10"></div>
 
-    <nav class="fixed w-full z-50 nav-blur border-b border-gray-900">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold gradient-text">NE.</span>
-            <div class="space-x-6 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#work" class="hover:text-white transition">Expertise</a>
-                <a href="mailto:your-email@example.com" class="text-white border border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-800 transition">Contact</a>
-            </div>
+    <!-- Navigation -->
+    <nav class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-tighter title-font text-white">N.</div>
+        <div class="hidden md:flex gap-10 text-xs uppercase tracking-[0.2em] font-bold text-gray-500">
+            <a href="#about" class="hover:text-blue-500 transition">About</a>
+            <a href="#expertise" class="hover:text-blue-500 transition">Expertise</a>
+            <a href="#contact" class="hover:text-blue-500 transition">Connect</a>
         </div>
+        <a href="mailto:your-email@example.com" class="bg-white text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-500 hover:text-white transition">Hire Me</a>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter">NAFIU <span class="gradient-text">EBRAHIM</span></h1>
-        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
-            Tech Enthusiast • Web Developer • Trader • Global Traveler
-        </p>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="#work" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold transition shadow-lg shadow-blue-900/20">Explore My World</a>
-        </div>
-    </section>
-
-    <section id="about" class="py-32 px-6 max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-8">The Mission</h2>
-        <p class="text-xl text-gray-400 leading-relaxed italic">
-            "I spend my time at the intersection of code, AI, and trading. For me, it’s all about staying ahead of the curve—whether that’s mastering a new framework or exploring a new country."
-        </p>
-    </section>
-
-    <section id="work" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card p-10 rounded-3xl">
-                <div class="text-blue-500 mb-4 text-3xl">💻</div>
-                <h3 class="text-2xl font-bold mb-3">Web Development</h3>
-                <p class="text-gray-400 leading-relaxed">Building clean, high-performance websites and exploring AI-integrated workflows for the modern web.</p>
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-20 pb-32 grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6">
+                <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span></span>
+                AVAILABLE FOR STRATEGIC PARTNERSHIPS
             </div>
-            <div class="card p-10 rounded-3xl">
-                <div class="text-purple-500 mb-4 text-3xl">📉</div>
-                <h3 class="text-2xl font-bold mb-3">Global Trading</h3>
-                <p class="text-gray-400 leading-relaxed">Analyzing market trends and financial technology with a focus on high-growth technical analysis.</p>
-            </div>
-            <div class="card p-10 rounded-3xl">
-                <div class="text-green-500 mb-4 text-3xl">🤖</div>
-                <h3 class="text-2xl font-bold mb-3">AI & Future Tech</h3>
-                <p class="text-gray-400 leading-relaxed">Early adopter of AI tools for content creation, automated systems, and solving complex digital problems.</p>
-            </div>
-            <div class="card p-10 rounded-3xl">
-                <div class="text-red-500 mb-4 text-3xl">✈️</div>
-                <h3 class="text-2xl font-bold mb-3">Tech Travel</h3>
-                <p class="text-gray-400 leading-relaxed">Combining work with exploration, documenting high-end tech trends across international borders.</p>
+            <h1 class="text-7xl md:text-8xl font-extrabold title-font text-white leading-[0.9] tracking-tighter mb-8">
+                BUILDING <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">VALUE.</span>
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed mb-10 max-w-lg">
+                International Trade specialist focusing on high-end tech hardware, market arbitrage, and luxury brand strategy.
+            </p>
+            <div class="flex gap-4">
+                <a href="#expertise" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">View Portfolio</a>
+                <a href="#about" class="glass-card px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">Learn More</a>
             </div>
         </div>
-    </section>
 
-    <footer class="py-20 text-center border-t border-gray-900 mt-20">
-        <p class="text-gray-600 uppercase tracking-widest text-xs">© 2026 Nafiu Ebrahim — Built with AI</p>
-    </footer>
+        <div class="relative">
+            <div class="glass-card aspect-[4/5] overflow-hidden rotate-2 hover:rotate-0 transition duration-500">
+                <!-- Replace 'me.jpg' with your photo filename -->
+                <img src="me.jpg" alt="NAFIU" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            </div>
+            <div class="absolute -bottom-8 -right-8 glass-card p-8 rotate-[-2deg]">
+                <div class="text-4xl font-bold title-font text-white">95%</div>
+                <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Resale Profit Margin</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section id="expertise" class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-10">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 text-blue-400 font-bold italic">iP</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Tech Resale</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Specializing in high-cycle Apple hardware diagnostics and international resale logistics.</p>
+            </div>
+            <div class="glass-card p-10">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6 text-emerald-400 font-bold italic">$$</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Market Strategy</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Statistical analysis for international football and cricket markets with focus on ROI.</p>
+            </div>
+            <div class="glass-card p-10">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 text-purple-400 font-bold italic">AI</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Digital Creation</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Content creation and digital storytelling focusing on finance and global history.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
